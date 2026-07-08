@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="description" content="중국 주요 역사 유적지를 한국어와 중국어로 함께 배우는 여행 가이드" />
+  <title>중국어 역사문화 여행 가이드 - 회화 이미지 버전</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="has-dialogue-images">
+  <!-- 상단바: 앱 제목 + 언어 토글 -->
+  <header class="topbar">
+    <button class="topbar__back" id="backBtn" aria-label="뒤로가기" hidden>&#8592;</button>
+    <h1 class="topbar__title">
+      <span class="topbar__zh">中国历史文化旅行指南</span>
+      <span class="topbar__ko">중국어 역사문화 여행 가이드</span>
+    </h1>
+    <button class="lang-toggle" id="langToggle" aria-label="언어 전환">
+      <span class="lang-toggle__label">KO</span>
+    </button>
+  </header>
+
+  <!-- 화면이 그려지는 영역 (app.js가 여기에 목록/상세/퀴즈를 렌더링) -->
+  <main id="app" class="app"></main>
+
+  <!-- 하단 네비게이션 -->
+  <nav class="bottomnav">
+    <a href="#/" class="bottomnav__item" data-nav="home">
+      <span class="bottomnav__icon">&#127961;</span>
+      <span class="bottomnav__text" data-i18n="nav.home">유적지</span>
+    </a>
+    <a href="#/quiz" class="bottomnav__item" data-nav="quiz">
+      <span class="bottomnav__icon">&#9997;</span>
+      <span class="bottomnav__text" data-i18n="nav.quiz">퀴즈</span>
+    </a>
+    <a href="#/about" class="bottomnav__item" data-nav="about">
+      <span class="bottomnav__icon">&#8505;</span>
+      <span class="bottomnav__text" data-i18n="nav.about">소개</span>
+    </a>
+  </nav>
+
+  <!-- 데이터는 학생이 채우는 곳(js/data.js), 로직은 js/app.js -->
+  <script src="js/data.js"></script>
+  <script src="js/dialogue-images.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
